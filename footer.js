@@ -1,0 +1,1 @@
+INFOOTER.innerHTML = footercontent;
