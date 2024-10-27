@@ -1,8 +1,7 @@
-book = document.querySelector("body").attributes[0].nodeValue;
 chapitres = document.getElementsByClassName("chapter");
 size = chapitres.length;
 
-
+console.log(size);
 function makelist(){
 	list = document.createElement("li");
 	MAINLIST.appendChild(list);
@@ -25,7 +24,7 @@ function makeitem(){
 	link = document.createElement("a");
 	sublist.appendChild(menuitem);
 	menuitem.appendChild(link);
-	link.setAttribute("href","#" + book + "-" + i);
+	link.setAttribute("href","#" + BOOK + "-" + i);
 	link.innerHTML = i;
 	i++;
 };
@@ -43,8 +42,7 @@ switch(LANG){
 	case "egy":
 		nochapter = "-";
 		break;
-}
-
+};
 if(size == 1) {
 	list = document.createElement("li");
 	MAINLIST.appendChild(list);
@@ -65,3 +63,4 @@ if(size == 1) {
 		};
 	};
 };
+console.log(LANG);
