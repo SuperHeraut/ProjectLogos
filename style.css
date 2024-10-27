@@ -21,6 +21,9 @@ header{
 	background-color: #20202080;
 	backdrop-filter: blur(5px);
 }
+sub, sup{
+	font-size: 0.5rem;
+}
 h2{
 	font-weight: 700;
 	font-size: 1.5rem;
