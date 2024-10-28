@@ -1,7 +1,8 @@
+//my masterpiece
 chapitres = document.getElementsByClassName("chapter");
 size = chapitres.length;
 
-console.log(size);
+//this function creat a list of lists of ten items each
 function makelist(){
 	list = document.createElement("li");
 	MAINLIST.appendChild(list);
@@ -18,6 +19,7 @@ function makelist(){
 	number.innerHTML = sublistname;
 };
 
+//this functions creat the items that will be put by tens by the abovesaid function
 function makeitem(){
 	menuitem = document.createElement("li");
 	menuitem.setAttribute("class", "roll");
@@ -29,6 +31,7 @@ function makeitem(){
 	i++;
 };
 
+//this is a switch for if there is only one chapter, to determine the language that will be used in the nochapter item
 switch(LANG){
 	case "fr":
 		nochapter = "chapitre unique";
@@ -43,6 +46,8 @@ switch(LANG){
 		nochapter = "-";
 		break;
 };
+
+//if only one, the abovesaid switch is triggered
 if(size == 1) {
 	list = document.createElement("li");
 	MAINLIST.appendChild(list);
@@ -51,6 +56,7 @@ if(size == 1) {
 	list.appendChild(number);
 	number.innerHTML = nochapter;
 } else {
+//in any other case, this baby comes into action, a mix of the two first functions of this script. and if you don't understand it, just consider it's magic.
 	while(i <= size){
 		y++;
 		if(y == 1){
@@ -63,4 +69,3 @@ if(size == 1) {
 		};
 	};
 };
-console.log(LANG);
