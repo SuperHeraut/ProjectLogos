@@ -27,7 +27,7 @@ let sublist;
 let sublistname;
 
 // book vars
-
+let booklist;
 let bookgn;
 let bookex;
 let booklv;
@@ -127,7 +127,7 @@ if (LANG == "egy") {
 	BODY.setAttribute("class", "hieroglyph vertext");
 }
 
-
+//this switch impacts the footer content
 switch (VERSION) {
 	case "aelf":
 		shortversion = "Traduction Liturgique de la Bible";
@@ -142,6 +142,8 @@ switch (VERSION) {
 		shortversion = "";
 		footercontent = "";
 };
+
+// the following determine the browser tab
 switch (LANG){
 	case "fr":
 		booklist = "Bible";
@@ -176,50 +178,50 @@ switch (LANG){
 		bookps2 = "Ps 51-100";
 		bookps3 = "Ps 101-150";
 		bookis = "Isa&iuml;e";
-		bookjr = "J";
-		bookla = "";
-		bookba = "";
-		bookez = "";
-		bookda = "";
-		bookos = "";
-		bookjl = "";
-		bookam = "";
-		bookab = "";
-		bookjon = "";
-		bookmi = "";
-		bookna = "";
-		bookha = "";
-		bookso = "";
-		bookag = "";
-		bookza = "";
-		bookml = "";
-		bookmt = "";
-		bookmc = "";
-		booklc = "";
-		bookjn = "";
-		bookac = "";
-		bookrm = "";
-		book1co = "";
-		book2co = "";
-		bookga = "";
-		bookep = "";
-		bookph = "";
-		bookcol = "";
-		book1th = "";
-		book2th = "";
-		book1tm = "";
-		book2tm = "";
-		booktt = "";
-		bookphm = "";
-		bookhe = "";
-		bookjc = "";
-		book1p = "";
-		book2p = "";
-		book1jn = "";
-		book2jn = "";
-		book3jn = "";
-		bookjd = "";
-		bookap = "";
+		bookjr = "J&eacute;r&eacute;mie";
+		bookla = "Lamentations";
+		bookba = "Baruch";
+		bookez = "&Eacute;z&eacute;quiel";
+		bookda = "Daniel";
+		bookos = "Hoch&eacute;e";
+		bookjl = "Jo&euml;l";
+		bookam = "Amos";
+		bookab = "Abdias";
+		bookjon = "Jonas";
+		bookmi = "Micah";
+		bookna = "Nahum";
+		bookha = "Habaquq";
+		bookso = "Tsophonias";
+		bookag = "Hagga&iuml;";
+		bookza = "Zakarias";
+		bookml = "Malaki";
+		bookmt = "Matthieu";
+		bookmc = "Marc";
+		booklc = "Luc";
+		bookjn = "Jean";
+		bookac = "Actes des Ap&ocirc;tres";
+		bookrm = "Romains";
+		book1co = "1 Corinthiens";
+		book2co = "2 Corinthiens";
+		bookga = "Galates";
+		bookep = "&Eacute;ph&eacute;siens";
+		bookph = "Philippiens";
+		bookcol = "Colossiens";
+		book1th = "1 Thessaloniciens";
+		book2th = "2 Thessaloniciens";
+		book1tm = "1 Timoth&eacute;e";
+		book2tm = "2 Timoth&eacute;e";
+		booktt = "Titus";
+		bookphm = "Phil&eacute;mon";
+		bookhe = "H&eacute;breux";
+		bookjc = "Jacques";
+		book1p = "1 Pierre";
+		book2p = "2 Pierre";
+		book1jn = "1 Jean";
+		book2jn = "2 Jean";
+		book3jn = "3 Jean";
+		bookjd = "Jude";
+		bookap = "Apocalypse";
 		break;
 	case "en":
 		bookgn = "";
@@ -300,6 +302,7 @@ switch (LANG){
 		bookap = "";
 		break;
 }
+// this switch also determines the title displayed on tab, also determined by language. DO NOT TOUCH!!!
 switch (BOOK) {
 	case "gn":
 		shorttitle = bookgn;
