@@ -40,6 +40,15 @@ main{
 	min-width: 80vw;
 	max-width: 1080px;
 }
+p{
+	text-indent: 1.5rem;
+	text-align: justify;
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+h2 + p {
+	text-indent: 0;
+}
 i{
 	font-style: italic;
 }
