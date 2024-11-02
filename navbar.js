@@ -1,3 +1,10 @@
+if (BOOK == "books") {
+} else {
+	HEADER.appendChild(LISTLINK);
+	LISTLINK.setAttribute("href", "./books.html");
+	LISTLINK.innerHTML = mainlist;
+}
+
 //my masterpiece
 chapitres = document.getElementsByClassName("chapter");
 size = chapitres.length;
