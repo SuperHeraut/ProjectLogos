@@ -1,4 +1,4 @@
-// inserting the whole script
+// ðis script call ðe other scripts on the page. may noȝt work properly due to need of ðe browser to read ðe page at least twice. F5 until everyþing appears.
 const BODY = document.querySelector("body");
 
 const VARS = document.createElement("script");
