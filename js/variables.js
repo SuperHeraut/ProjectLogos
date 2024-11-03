@@ -116,7 +116,6 @@ const PAGEURL = location.pathname.split("/");
 const LANG = PAGEURL[PAGEURL.length - 3];
 const VERSION = PAGEURL[PAGEURL.length - 2];
 const BOOK = PAGEURL[PAGEURL.length - 1].split(".")[0];
-bookid = document.querySelector("body").setAttribute("id", BOOK);
 const HTML = document.querySelector("html");
 const HEADER = document.querySelector("header");
 const LISTLINK = document.createElement("a");
@@ -126,11 +125,14 @@ const FOOTER = document.querySelector("footer");
 const INFOOTER = document.createElement("span");
 const TITLE = document.createElement("title");
 const FAVICON = document.createElement("link");
+
+bookid = document.querySelector("body").setAttribute("id", BOOK);
 HTML.setAttribute("lang", LANG);
 HEADER.appendChild(NAVBAR);
 NAVBAR.appendChild(MAINLIST);
 MAINLIST.setAttribute("id", "menu");
 FOOTER.appendChild(INFOOTER);
+
 if (LANG == "egy") {
 	BODY.setAttribute("class", "hieroglyph vertext");
 }
@@ -313,6 +315,7 @@ switch (LANG){
 		break;
 }
 // this switch also determines the title displayed on tab, also determined by language. DO NOT TOUCH!!!
+book = "book";
 switch (BOOK) {
 	case "ps-001-050":
 		shorttitle = bookps1;
@@ -326,10 +329,10 @@ switch (BOOK) {
 	case "books":
 		shorttitle = booklist;
 	default:
-		shorttitle = "book" + BOOK;
+		window[book] = book;
+		shorttitle = book + BOOK;
 		break
 }
 console.log(shorttitle);
-shorttitle = window[shorttitle];
-console.log(shorttitle);
+console.log(window[shorttitle]);
 const BOOKMARK = shorttitle + " - " + shortversion;

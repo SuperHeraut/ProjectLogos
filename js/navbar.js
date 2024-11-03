@@ -62,17 +62,16 @@ if(size == 1) {
 	number = document.createElement("a");
 	list.appendChild(number);
 	number.innerHTML = nochapter;
-} else {
-//in any other case, this baby comes into action, a mix of the two first functions of this script. and if you don't understand it, just consider it's magic.
-	while(i <= size){
-		y++;
-		if(y == 1){
-			makelist();
-			j++;
-		};
-		makeitem(i);
+} else { //in any other case, this baby comes into action, a mix of the two first functions of this script. and if you don't understand it, just consider it's magic.
+	while(i <= size){ //until i reaches the total of anchors (size),
+		y++; //initialises the counter of ten,
+		if(y == 1){ //for each new pack of ten initialised,
+			makelist(); //create the pack,
+			j++;  //for each new pack,
+		}; //then,
+		makeitem(i); //fill it with the list items and,
 		if(y == 10){
 			y = 0;
-		};
+		};//when reaching 10, go back to 0, making a new pack if needed.
 	};
 };
