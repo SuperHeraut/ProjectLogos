@@ -17,10 +17,10 @@ HEAD.appendChild(TITLE);
 
 // head link css
 RESET.setAttribute("rel", "stylesheet");
-RESET.setAttribute("href", "../../reset.css");
+RESET.setAttribute("href", "../../css/reset.css");
 
 STYLE.setAttribute("rel", "stylesheet");
-STYLE.setAttribute("href", "../../style.css");
+STYLE.setAttribute("href", "../../css/style.css");
 
 HEAD.appendChild(RESET);
 HEAD.appendChild(STYLE);
