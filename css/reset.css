@@ -107,6 +107,9 @@ ol,
 ul {
 	list-style: none;
 }
+li{
+	text-decoration: none;
+}
 blockquote,
 q {
 	quotes: none;

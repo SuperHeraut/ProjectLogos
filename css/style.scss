@@ -18,6 +18,11 @@ $twothirds: calc(100% / 3 * 2);
 	flex-direction: row;
 	justify-content: space-between;
 }
+%flexSE{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
 
 html{
 	font-size: 16px;
@@ -229,11 +234,11 @@ li{
 	}
 }
 #welcome{
-	@extend %flexSB;
+	@extend %flexSE;
 	flex-wrap: wrap;
-}
-#mainpagecover{
-	max-height: $twothirds;
+	img{
+	height: 66vh;
+	}
 }
 
 @media screen and (min-width:1080px){
