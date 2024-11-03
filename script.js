@@ -2,16 +2,16 @@
 const BODY = document.querySelector("body");
 
 const VARS = document.createElement("script");
-	VARS.setAttribute("src", "../../variables.js");
+	VARS.setAttribute("src", "../../js/variables.js");
 
 const HDP = document.createElement("script");
-	HDP.setAttribute("src", "../../head.js");
+	HDP.setAttribute("src", "../../js/head.js");
 
 const NBR = document.createElement("script");
-	NBR.setAttribute("src", "../../navbar.js");
+	NBR.setAttribute("src", "../../js/navbar.js");
 
 const FTR = document.createElement("script");
-	FTR.setAttribute("src", "../../footer.js");
+	FTR.setAttribute("src", "../../js/footer.js");
 
 BODY.appendChild(VARS);
 BODY.appendChild(HDP);
