@@ -315,7 +315,7 @@ switch (LANG){
 		break;
 }
 // this switch also determines the title displayed on tab, also determined by language. DO NOT TOUCH!!!
-book = "book";
+book = window["book"];
 switch (BOOK) {
 	case "ps-001-050":
 		shorttitle = bookps1;
@@ -329,10 +329,10 @@ switch (BOOK) {
 	case "books":
 		shorttitle = booklist;
 	default:
-		window[book] = book;
 		shorttitle = book + BOOK;
 		break
 }
 console.log(shorttitle);
 console.log(window[shorttitle]);
-const BOOKMARK = shorttitle + " - " + shortversion;
+const BOOKMARK = window[shorttitle] + " - " + shortversion;
+console.log(BOOKMARK);

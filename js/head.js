@@ -24,4 +24,3 @@ STYLE.setAttribute("href", "../../css/style.css");
 
 HEAD.appendChild(RESET);
 HEAD.appendChild(STYLE);
-
