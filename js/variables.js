@@ -549,6 +549,4 @@ switch (BOOK) {
 		shorttitle = book + BOOK;
 		break;
 }
-console.log(shorttitle);
 const BOOKMARK = shorttitle + " - " + shortversion;
-console.log(BOOKMARK);
