@@ -146,15 +146,16 @@ switch (VERSION) {
 		footerlink.setAttribute("href", "http://www.aelf.org");
 		footerlink.innerHTML = "AELF";
 		footercontent2 = "tous droits r&eacute;serv&eacute;s";
-		footercontent = footercontent1 + " " + footerlink.outerHTML + ", " + footercontent2;
+		footercontent =
+			footercontent1 + " " + footerlink.outerHTML + ", " + footercontent2;
 		break;
 	default:
 		shortversion = "";
 		footercontent = "";
-};
+}
 
 // the following determine the browser tab
-switch (LANG){
+switch (LANG) {
 	case "fr":
 		mainlist = "Liste des livres";
 		booklist = "Bible";
@@ -315,8 +316,88 @@ switch (LANG){
 		break;
 }
 // this switch also determines the title displayed on tab, also determined by language. DO NOT TOUCH!!!
-book = window["book"];
 switch (BOOK) {
+	case "gn":
+		shorttitle = bookgn;
+		break;
+	case "ex":
+		shorttitle = bookex;
+		break;
+	case "lv":
+		shorttitle = booklv;
+		break;
+	case "nb":
+		shorttitle = booknb;
+		break;
+	case "dt":
+		shorttitle = bookdt;
+		break;
+	case "jos":
+		shorttitle = bookjos;
+		break;
+	case "jg":
+		shorttitle = bookjg;
+		break;
+	case "rt":
+		shorttitle = bookrt;
+		break;
+	case "1s":
+		shorttitle = book1s;
+		break;
+	case "2s":
+		shorttitle = book2s;
+		break;
+	case "1r":
+		shorttitle = book1r;
+		break;
+	case "2r":
+		shorttitle = book2r;
+		break;
+	case "1ch":
+		shorttitle = book1ch;
+		break;
+	case "2ch":
+		shorttitle = book2ch;
+		break;
+	case "esd":
+		shorttitle = bookesd;
+		break;
+	case "ne":
+		shorttitle = bookne;
+		break;
+	case "tb":
+		shorttitle = booktb;
+		break;
+	case "jdt":
+		shorttitle = bookjdt;
+		break;
+	case "est":
+		shorttitle = bookest;
+		break;
+	case "1m":
+		shorttitle = book1m;
+		break;
+	case "2m":
+		shorttitle = book2m;
+		break;
+	case "jb":
+		shorttitle = bookjb;
+		break;
+	case "pr":
+		shorttitle = bookpr;
+		break;
+	case "qo":
+		shorttitle = bookqo;
+		break;
+	case "ct":
+		shorttitle = bookct;
+		break;
+	case "sg":
+		shorttitle = booksg;
+		break;
+	case "si":
+		shorttitle = booksi;
+		break;
 	case "ps-001-050":
 		shorttitle = bookps1;
 		break;
@@ -326,13 +407,148 @@ switch (BOOK) {
 	case "ps-101-150":
 		shorttitle = bookps3;
 		break;
+	case "is":
+		shorttitle = bookis;
+		break;
+	case "jr":
+		shorttitle = bookjr;
+		break;
+	case "la":
+		shorttitle = bookla;
+		break;
+	case "ba":
+		shorttitle = bookba;
+		break;
+	case "ez":
+		shorttitle = bookez;
+		break;
+	case "da":
+		shorttitle = bookda;
+		break;
+	case "os":
+		shorttitle = bookos;
+		break;
+	case "jl":
+		shorttitle = bookjl;
+		break;
+	case "am":
+		shorttitle = bookam;
+		break;
+	case "ab":
+		shorttitle = bookab;
+		break;
+	case "jon":
+		shorttitle = bookjon;
+		break;
+	case "mi":
+		shorttitle = bookmi;
+		break;
+	case "na":
+		shorttitle = bookna;
+		break;
+	case "ha":
+		shorttitle = bookha;
+		break;
+	case "so":
+		shorttitle = bookso;
+		break;
+	case "ag":
+		shorttitle = bookag;
+		break;
+	case "za":
+		shorttitle = bookza;
+		break;
+	case "ml":
+		shorttitle = bookml;
+		break;
+	case "mt":
+		shorttitle = bookmt;
+		break;
+	case "mc":
+		shorttitle = bookmc;
+		break;
+	case "lc":
+		shorttitle = booklc;
+		break;
+	case "jn":
+		shorttitle = bookjn;
+		break;
+	case "ac":
+		shorttitle = bookac;
+		break;
+	case "rm":
+		shorttitle = bookrm;
+		break;
+	case "1co":
+		shorttitle = book1co;
+		break;
+	case "2co":
+		shorttitle = book2co;
+		break;
+	case "ga":
+		shorttitle = bookga;
+		break;
+	case "ep":
+		shorttitle = bookep;
+		break;
+	case "ph":
+		shorttitle = bookph;
+		break;
+	case "col":
+		shorttitle = bookcol;
+		break;
+	case "1th":
+		shorttitle = book1th;
+		break;
+	case "2th":
+		shorttitle = book2th;
+		break;
+	case "1tm":
+		shorttitle = book1tm;
+		break;
+	case "2tm":
+		shorttitle = book2tm;
+		break;
+	case "tt":
+		shorttitle = booktt;
+		break;
+	case "phm":
+		shorttitle = bookphm;
+		break;
+	case "he":
+		shorttitle = bookhe;
+		break;
+	case "jc":
+		shorttitle = bookjc;
+		break;
+	case "1p":
+		shorttitle = book1p;
+		break;
+	case "2p":
+		shorttitle = book2p;
+		break;
+	case "1jn":
+		shorttitle = book1jn;
+		break;
+	case "2jn":
+		shorttitle = book2jn;
+		break;
+	case "3jn":
+		shorttitle = book3jn;
+		break;
+	case "jd":
+		shorttitle = bookjd;
+		break;
+	case "ap":
+		shorttitle = bookap;
+		break;
 	case "books":
 		shorttitle = booklist;
+		break;
 	default:
 		shorttitle = book + BOOK;
-		break
+		break;
 }
 console.log(shorttitle);
-console.log(window[shorttitle]);
-const BOOKMARK = window[shorttitle] + " - " + shortversion;
+const BOOKMARK = shorttitle + " - " + shortversion;
 console.log(BOOKMARK);
