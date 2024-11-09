@@ -316,6 +316,7 @@ switch (LANG) {
 		break;
 }
 // this switch also determines the title displayed on tab, also determined by language. DO NOT TOUCH!!!
+// if possible, i'd like to reduce it in a more simple form some day.
 switch (BOOK) {
 	case "gn":
 		shorttitle = bookgn;
