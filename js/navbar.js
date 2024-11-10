@@ -1,4 +1,4 @@
-if (BOOK == "books") {
+if (BOOK == "books" || "versions") {
 } else {
 	HEADER.appendChild(LISTLINK);
 	LISTLINK.setAttribute("href", "./books.html");
