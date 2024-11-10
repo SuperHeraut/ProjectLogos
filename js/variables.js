@@ -2,7 +2,8 @@
 let i = 1;
 let j = 1;
 let y = 0;
-// other vars
+
+// oðer vars
 let a;
 let book;
 let bookid;
@@ -105,7 +106,7 @@ let book3jn;
 let bookjd;
 let bookap;
 
-//constants
+//conſtants
 const HEAD = document.querySelector("head");
 const CHARSET = document.createElement("meta");
 const VP = document.createElement("meta");
@@ -137,7 +138,7 @@ if (LANG == "egy") {
 	BODY.setAttribute("class", "hieroglyph vertext");
 }
 
-//this switch impacts the footer content
+//ðis ſwitch impacts ðe footer content
 switch (VERSION) {
 	case "aelf":
 		shortversion = "Traduction Liturgique de la Bible";
@@ -154,7 +155,7 @@ switch (VERSION) {
 		footercontent = "";
 }
 
-// the following determine the browser tab
+// ðe following determine the browser tab
 switch (LANG) {
 	case "fr":
 		mainlist = "Liste des livres";
@@ -315,8 +316,8 @@ switch (LANG) {
 		bookap = "";
 		break;
 }
-// this switch also determines the title displayed on tab, also determined by language. DO NOT TOUCH!!!
-// if possible, i'd like to reduce it in a more simple form some day.
+// ðis ſwitch alſo determines ðe title diſplayed on tab, alſo determined by language. DO NOȜT TOUCH!!!
+// if poſsible, iȝ'd like to reduce it in a more ſimple form ſome day.
 switch (BOOK) {
 	case "gn":
 		shorttitle = bookgn;

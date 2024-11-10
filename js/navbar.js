@@ -5,12 +5,12 @@ if (BOOK == "books") {
 	LISTLINK.innerHTML = mainlist;
 }
 
-//my masterpiece
+//my maſterpiece
 chapitres = document.getElementsByClassName("chapter");
 size = chapitres.length;
 
-//this function creat a list of lists of ten items each
-function makelist(){
+//ðis function create a liſt of liſts of ten items each
+function makelist() {
 	list = document.createElement("li");
 	MAINLIST.appendChild(list);
 	list.setAttribute("class", "title");
@@ -18,28 +18,28 @@ function makelist(){
 	list.appendChild(number);
 	sublist = document.createElement("ul");
 	list.appendChild(sublist);
-	if(10 * j <= size){
+	if (10 * j <= size) {
 		sublistname = i + " - " + 10 * j;
-	}else{
+	} else {
 		sublistname = i + " - " + size;
-	};
+	}
 	number.innerHTML = sublistname;
-};
+}
 
-//this functions creat the items that will be put by tens by the abovesaid function
-function makeitem(){
+//ðis functions create the items ðat will be put by tens by the aboveſaid function
+function makeitem() {
 	menuitem = document.createElement("li");
 	menuitem.setAttribute("class", "roll");
 	link = document.createElement("a");
 	sublist.appendChild(menuitem);
 	menuitem.appendChild(link);
-	link.setAttribute("href","#" + BOOK + "-" + i);
+	link.setAttribute("href", "#" + BOOK + "-" + i);
 	link.innerHTML = i;
 	i++;
-};
+}
 
-//this is a switch for if there is only one chapter, to determine the language that will be used in the nochapter item
-switch(LANG){
+//ðis is a ſwitch for if ðere is only one chapter, to determine ðe language ðat will be used in the "nochapter" item
+switch (LANG) {
 	case "fr":
 		nochapter = "chapitre unique";
 		break;
@@ -52,26 +52,29 @@ switch(LANG){
 	case "egy":
 		nochapter = "-";
 		break;
-};
+}
 
-//if only one, the abovesaid switch is triggered
-if(size == 1) {
+//if only one, ðe aboveſaid ſwitch is triggered
+if (size == 1) {
 	list = document.createElement("li");
 	MAINLIST.appendChild(list);
 	list.setAttribute("class", "title");
 	number = document.createElement("a");
 	list.appendChild(number);
 	number.innerHTML = nochapter;
-} else { //in any other case, this baby comes into action, a mix of the two first functions of this script. and if you don't understand it, just consider it's magic.
-	while(i <= size){ //until i reaches the total of anchors (size),
-		y++; //initialises the counter of ten,
-		if(y == 1){ //for each new pack of ten initialised,
-			makelist(); //create the pack,
-			j++;  //for each new pack,
-		}; //then,
-		makeitem(i); //fill it with the list items and,
-		if(y == 10){
+} else {
+	//in any oðer case, ðis baby comes into action, a mix of ðe two firſt functions of ðis ſcript. and if you don't underſtand it, juſt conſider it's magic.
+	while (i <= size) {
+		//until it reaches ðe total of anchors (ſize),
+		y++; //initialises ðe counter of ten,
+		if (y == 1) {
+			//for each new pack of ten initialised,
+			makelist(); //create ðe pack,
+			j++; //for each new pack,
+		} //ðen,
+		makeitem(i); //fill it wið ðe liſt items and,
+		if (y == 10) {
 			y = 0;
-		};//when reaching 10, go back to 0, making a new pack if needed.
-	};
-};
+		} //ƕen reaching 10, go back to 0, making a new pack if needed.
+	}
+}
