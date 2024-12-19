@@ -1,0 +1,22 @@
+$background: #181818ff;
+$textcolour: #aaaaaaff;
+$headercolour: #20202080;
+$versered: #ff0000ff;
+$third: calc(100% / 3);
+$twothirds: calc(100% / 3 * 2);
+
+%blur {
+	backdrop-filter: blur(5px);
+}
+
+%flexSB {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+%flexSE {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}

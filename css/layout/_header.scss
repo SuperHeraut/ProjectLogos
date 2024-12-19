@@ -1,0 +1,62 @@
+header {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	padding: 1rem 0 0.1rem 0;
+	@extend %blur;
+
+	h2 {
+		float: none;
+		padding: initial;
+	}
+}
+
+nav {
+	a {
+		display: block;
+	}
+
+	#menu {
+		@extend %flexSB;
+		width: 100%;
+		margin: 0.5rem 0;
+
+		li {
+			width: auto;
+			position: relative;
+
+			&.title {
+				display: flex;
+				flex-direction: column;
+				vertical-align: top;
+				margin: 0;
+				letter-spacing: normal;
+				box-sizing: border-box;
+				max-width: $third;
+				min-width: 20%;
+
+				ul {
+					display: none;
+					width: 100%;
+					box-sizing: border-box;
+					position: absolute;
+
+					.roll {
+						width: 100%;
+					}
+				}
+
+				&:hover {
+					ul {
+						display: block;
+						text-align: center;
+						padding-bottom: 0.25rem;
+						border-radius: 0 0 1rem 1rem;
+						@extend %blur;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,12 +1,8 @@
-@font-face {
-  font-family: Aegyptus;
-  src: url(./fonts/Aegyptus/Aegyptus.ttf);
-}
-.title:hover ul, header {
+nav #menu li.title:hover ul, header {
   backdrop-filter: blur(5px);
 }
 
-#menu, #booklist section {
+#booklist section, nav #menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,37 +20,39 @@ html {
   color: #aaaaaa;
   background-color: #181818;
 }
+html main {
+  max-width: 720px;
+  margin: auto;
+}
+html section {
+  padding: 0.5rem 0;
+}
+html section div {
+  padding: 0.2rem 0;
+}
 
+.item {
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 1080px) {
+  main {
+    max-width: 1080px;
+    margin: auto;
+  }
+}
+@font-face {
+  font-family: Aegyptus;
+  src: url(./fonts/Aegyptus/Aegyptus.ttf);
+}
 h1 {
   font-size: 3rem;
   font-weight: 700;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  padding: 1rem 0 0.1rem 0;
-}
-
-sub, sup {
-  font-size: 0.5rem;
-}
-
 h2 {
   font-weight: 700;
   font-size: 1.5rem;
-}
-
-header h2 {
-  float: none;
-  padding: initial;
-}
-
-main {
-  max-width: 720px;
-  margin: auto;
 }
 
 p {
@@ -68,26 +66,19 @@ h2 + p {
   text-indent: 0;
 }
 
+sub,
+sup {
+  font-size: 0.5rem;
+}
+
 i {
   font-style: italic;
-}
-
-section {
-  padding: 0.5rem 0;
-}
-
-section div {
-  padding: 0.2rem 0;
 }
 
 ul,
 li {
   text-decoration: none;
   text-align: center;
-}
-
-nav a {
-  display: block;
 }
 
 li ul {
@@ -124,15 +115,15 @@ li ul {
   vertical-align: super;
 }
 
-.vertext {
-  writing-mode: vertical-lr;
-}
-
 .vertical {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   overflow-wrap: break-word;
+}
+
+.vertext {
+  writing-mode: vertical-lr;
 }
 
 .bigfont {
@@ -173,11 +164,37 @@ li ul {
   height: 50%;
 }
 
-.roll {
-  width: 100%;
+#endbook {
+  color: red;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
 }
 
-.title {
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0 0.1rem 0;
+}
+header h2 {
+  float: none;
+  padding: initial;
+}
+
+nav a {
+  display: block;
+}
+nav #menu {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+nav #menu li {
+  width: auto;
+  position: relative;
+}
+nav #menu li.title {
   display: flex;
   flex-direction: column;
   vertical-align: top;
@@ -187,33 +204,29 @@ li ul {
   max-width: 33.3333333333%;
   min-width: 20%;
 }
-
-.title ul {
+nav #menu li.title ul {
   display: none;
   width: 100%;
   box-sizing: border-box;
   position: absolute;
 }
-
-.title:hover ul {
+nav #menu li.title ul .roll {
+  width: 100%;
+}
+nav #menu li.title:hover ul {
   display: block;
   text-align: center;
   padding-bottom: 0.25rem;
   border-radius: 0 0 1rem 1rem;
 }
 
-.item {
-  padding: 1rem 0;
-}
-
 .booklist {
   display: flex;
 }
-
 .booklist ul {
   display: block;
 }
-.booklist li {
+.booklist ul li {
   padding-left: 1rem;
 }
 
@@ -221,26 +234,8 @@ li ul {
   min-width: 80vw;
   max-width: 1080px;
 }
-
 #booklist section {
   width: 100%;
-}
-
-#endbook {
-  color: red;
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-#menu {
-  width: 100%;
-  margin: 0.5rem 0;
-}
-
-#menu li {
-  width: auto;
-  position: relative;
 }
 
 #welcome {
@@ -248,13 +243,6 @@ li ul {
 }
 #welcome img {
   height: 66vh;
-}
-
-@media screen and (min-width: 1080px) {
-  main {
-    max-width: 1080px;
-    margin: auto;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
