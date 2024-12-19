@@ -1,0 +1,134 @@
+@font-face {
+	font-family: Aegyptus;
+	src: url(./fonts/Aegyptus/Aegyptus.ttf);
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 700;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+p {
+	text-indent: 1.5rem;
+	text-align: justify;
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+
+h2+p {
+	text-indent: 0;
+}
+
+sub,
+sup {
+	font-size: 0.5rem;
+}
+
+i {
+	font-style: italic;
+}
+
+ul,
+li {
+	text-decoration: none;
+	text-align: center;
+}
+
+li {
+	ul {
+		display: block;
+		top: 1rem;
+	}
+}
+
+.lettrine {
+	font-size: 2.5rem;
+	padding: 0 0.25rem 0 0;
+}
+
+.bold,
+.lettrine .verse {
+	font-weight: 700;
+}
+
+.smallcaps {
+	text-transform: uppercase;
+	font-size: 0.75rem;
+}
+
+.chapter {
+	float: left;
+}
+
+.verse,
+.red {
+	color: $versered;
+}
+
+.verse {
+	font-size: 0.5rem;
+	vertical-align: super;
+}
+
+.vertical {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	overflow-wrap: break-word;
+}
+
+.vertext {
+	writing-mode: vertical-lr;
+}
+
+.bigfont {
+	font-size: 3rem;
+	line-height: 3.5rem;
+}
+
+.hieroglyph {
+	font-family: Aegyptus;
+}
+
+.hieroglyph {
+	.verse {
+		font-size: 1rem;
+		vertical-align: baseline;
+	}
+}
+
+.quadHor,
+.quadVer {
+	width: 3rem;
+	height: 3rem;
+}
+
+.quadVer {
+	display: flex;
+	flex-direction: row;
+}
+
+.quadHor {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.halfwidth {
+	width: 50%;
+}
+
+.halfheight {
+	height: 50%;
+}
+
+#endbook {
+	color: $versered;
+	font-size: 2rem;
+	font-weight: 700;
+	text-align: center;
+}

@@ -1,294 +1,33 @@
-@font-face {
-	font-family: Aegyptus;
-	src: url(./fonts/Aegyptus/Aegyptus.ttf);
-}
+// utils
+@import "utils/variables";
+@import "utils/functions";
+@import "utils/mixins";
+@import "utils/helpers";
 
-$background: #181818ff;
-$textcolour: #aaaaaaff;
-$headercolour: #20202080;
-$versered: #ff0000ff;
-$third: calc(100% / 3);
-$twothirds: calc(100% / 3 * 2);
+// Base styles
+@import "base/reset";
+@import "base/typography";
 
-%blur {
-	backdrop-filter: blur(5px);
-}
+// Layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+@import "layout/grid";
+@import "layout/forms";
+@import "layout/navigation";
 
-%flexSB {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
+// Components
+@import "components/buttons";
+@import "components/carousel";
+@import "components/cover";
+@import "components/dropdown";
 
-%flexSE {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-}
+// Pages
+@import "pages/books";
+@import "pages/versions";
 
-html {
-	font-size: 16px;
-	font-family: "Times New Roman";
-	color: $textcolour;
-	background-color: $background;
-}
+// Themes
+@import "themes/admin";
+@import "themes/theme";
 
-h1 {
-	font-size: 3rem;
-	font-weight: 700;
-}
-
-header {
-	position: sticky;
-	top: 0;
-	width: 100%;
-	text-align: center;
-	padding: 1rem 0 0.1rem 0;
-	@extend %blur;
-}
-
-sub,
-sup {
-	font-size: 0.5rem;
-}
-
-h2 {
-	font-weight: 700;
-	font-size: 1.5rem;
-}
-
-header {
-	h2 {
-		float: none;
-		padding: initial;
-	}
-}
-
-main {
-	max-width: 720px;
-	margin: auto;
-}
-
-p {
-	text-indent: 1.5rem;
-	text-align: justify;
-	overflow-wrap: break-word;
-	hyphens: auto;
-}
-
-h2+p {
-	text-indent: 0;
-}
-
-i {
-	font-style: italic;
-}
-
-section {
-	padding: 0.5rem 0;
-}
-
-section {
-	div {
-		padding: 0.2rem 0
-	}
-}
-
-ul,
-li {
-	text-decoration: none;
-	text-align: center;
-}
-
-nav {
-	a {
-		display: block;
-	}
-}
-
-li {
-	ul {
-		display: block;
-		top: 1rem;
-	}
-}
-
-.lettrine {
-	font-size: 2.5rem;
-	padding: 0 0.25rem 0 0;
-}
-
-.bold,
-.lettrine .verse {
-	font-weight: 700;
-}
-
-.smallcaps {
-	text-transform: uppercase;
-	font-size: 0.75rem;
-}
-
-.chapter {
-	float: left;
-}
-
-.verse,
-.red {
-	color: $versered;
-}
-
-.verse {
-	font-size: 0.5rem;
-	vertical-align: super;
-}
-
-.vertext {
-	writing-mode: vertical-lr;
-}
-
-.vertical {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	overflow-wrap: break-word;
-}
-
-.bigfont {
-	font-size: 3rem;
-	line-height: 3.5rem;
-}
-
-.hieroglyph {
-	font-family: Aegyptus;
-}
-
-.hieroglyph {
-	.verse {
-		font-size: 1rem;
-		vertical-align: baseline;
-	}
-}
-
-.quadHor,
-.quadVer {
-	width: 3rem;
-	height: 3rem;
-}
-
-.quadVer {
-	display: flex;
-	flex-direction: row;
-}
-
-.quadHor {
-	display: flex;
-	flex-direction: column-reverse;
-}
-
-.halfwidth {
-	width: 50%;
-}
-
-.halfheight {
-	height: 50%;
-}
-
-.roll {
-	width: 100%;
-}
-
-.title {
-	display: flex;
-	flex-direction: column;
-	vertical-align: top;
-	margin: 0;
-	letter-spacing: normal;
-	box-sizing: border-box;
-	max-width: $third;
-	min-width: 20%;
-}
-
-.title {
-	ul {
-		display: none;
-		width: 100%;
-		box-sizing: border-box;
-		position: absolute;
-	}
-}
-
-.title:hover {
-	ul {
-		display: block;
-		text-align: center;
-		padding-bottom: 0.25rem;
-		border-radius: 0 0 1rem 1rem;
-		@extend %blur;
-	}
-}
-
-.item {
-	padding: 1rem 0;
-}
-
-.booklist {
-	display: flex;
-}
-
-.booklist {
-	ul {
-		display: block;
-	}
-
-	li {
-		padding-left: 1rem;
-	}
-}
-
-#booklist {
-	min-width: 80vw;
-	max-width: 1080px;
-}
-
-#booklist {
-	section {
-		width: 100%;
-		@extend %flexSB;
-	}
-}
-
-#endbook {
-	color: $versered;
-	font-size: 2rem;
-	font-weight: 700;
-	text-align: center;
-}
-
-#menu {
-	@extend %flexSB;
-	width: 100%;
-	margin: 0.5rem 0;
-}
-
-#menu {
-	li {
-		width: auto;
-		position: relative;
-	}
-}
-
-#welcome {
-	@extend %flexSE;
-	flex-wrap: wrap;
-
-	img {
-		height: 66vh;
-	}
-}
-
-@media screen and (min-width:1080px) {
-	main {
-		max-width: 1080px;
-		margin: auto;
-	}
-}
+// no Vendors

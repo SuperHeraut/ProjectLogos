@@ -1,0 +1,8 @@
+#welcome {
+	@extend %flexSE;
+	flex-wrap: wrap;
+
+	img {
+		height: 66vh;
+	}
+}

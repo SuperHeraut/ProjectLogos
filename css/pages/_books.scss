@@ -1,0 +1,21 @@
+.booklist {
+	display: flex;
+
+	ul {
+		display: block;
+
+		li {
+			padding-left: 1rem;
+		}
+	}
+}
+
+#booklist {
+	min-width: 80vw;
+	max-width: 1080px;
+
+	section {
+		width: 100%;
+		@extend %flexSB;
+	}
+}
