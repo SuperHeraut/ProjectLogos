@@ -93,10 +93,8 @@ li {
 
 .hieroglyph {
 	font-family: Aegyptus;
-}
 
-.hieroglyph {
-	.verse {
+	&&.verse {
 		font-size: 1rem;
 		vertical-align: baseline;
 	}
