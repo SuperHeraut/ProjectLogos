@@ -5,11 +5,11 @@ if (BOOK == "books" || "versions") {
 	LISTLINK.innerHTML = mainlist;
 }
 
-//my maſterpiece
+//my maﬅerpiece
 chapitres = document.getElementsByClassName("chapter");
 size = chapitres.length;
 
-//ðis function create a liſt of liſts of ten items each
+//ðis function create a liﬅ of liﬅs of ten items each
 function makelist() {
 	list = document.createElement("li");
 	MAINLIST.appendChild(list);
@@ -63,7 +63,7 @@ if (size == 1) {
 	list.appendChild(number);
 	number.innerHTML = nochapter;
 } else {
-	//in any oðer case, ðis baby comes into action, a mix of ðe two firſt functions of ðis ſcript. and if you don't underſtand it, juſt conſider it's magic.
+	//in any oðer case, ðis baby comes into action, a mix of ðe two firﬅ functions of ðis ſcript. and if you don't underﬅand it, juﬅ conſider it's magic.
 	while (i <= size) {
 		//until it reaches ðe total of anchors (ſize),
 		y++; //initialises ðe counter of ten,
@@ -72,7 +72,7 @@ if (size == 1) {
 			makelist(); //create ðe pack,
 			j++; //for each new pack,
 		} //ðen,
-		makeitem(i); //fill it wið ðe liſt items and,
+		makeitem(i); //fill it wið ðe liﬅ items and,
 		if (y == 10) {
 			y = 0;
 		} //ƕen reaching 10, go back to 0, making a new pack if needed.
