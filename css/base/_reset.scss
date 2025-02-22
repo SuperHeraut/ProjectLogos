@@ -5,8 +5,9 @@ html {
 	background-color: $background;
 
 	main {
-		max-width: 720px;
 		margin: auto;
+		box-sizing: border-box;
+		padding: 1rem;
 	}
 
 	section {
@@ -22,9 +23,26 @@ html {
 	padding: 1rem 0;
 }
 
-@media screen and (min-width:1080px) {
+@media screen and (max-width:719px) {
+	main {
+		width: 100vw;
+	}
+}
+
+@media screen and (min-width:720px) and (max-width:1097px) {
+	main {
+		max-width: 720px;
+	}
+}
+
+@media screen and (min-width:1080px) and (max-width:1919px) {
 	main {
 		max-width: 1080px;
-		margin: auto;
+	}
+}
+
+@media screen and (min-width:1920px) {
+	main {
+		max-width: 1366px;
 	}
 }
